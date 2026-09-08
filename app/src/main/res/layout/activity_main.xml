@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_color"
+    android:padding="16dp">
+
+    <!-- 显示区域 -->
+    <TextView
+        android:id="@+id/expressionText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:textSize="24sp"
+        android:textColor="@color/text_secondary"
+        android:layout_marginTop="32dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:textSize="56sp"
+        android:textColor="@color/text_primary"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="0" />
+
+    <!-- 按钮区域 -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:rowCount="5"
+        android:alignmentMode="alignMargins"
+        android:useDefaultMargins="false">
+
+        <!-- Row 1 -->
+        <Button android:id="@+id/btnClear" style="@style/FunctionButton" android:text="C" />
+        <Button android:id="@+id/btnDel" style="@style/FunctionButton" android:text="DEL" />
+        <Button android:id="@+id/btnPercent" style="@style/FunctionButton" android:text="%" />
+        <Button android:id="@+id/btnDivide" style="@style/OperatorButton" android:text="÷" />
+
+        <!-- Row 2 -->
+        <Button android:id="@+id/btn7" style="@style/NumberButton" android:text="7" />
+        <Button android:id="@+id/btn8" style="@style/NumberButton" android:text="8" />
+        <Button android:id="@+id/btn9" style="@style/NumberButton" android:text="9" />
+        <Button android:id="@+id/btnMultiply" style="@style/OperatorButton" android:text="×" />
+
+        <!-- Row 3 -->
+        <Button android:id="@+id/btn4" style="@style/NumberButton" android:text="4" />
+        <Button android:id="@+id/btn5" style="@style/NumberButton" android:text="5" />
+        <Button android:id="@+id/btn6" style="@style/NumberButton" android:text="6" />
+        <Button android:id="@+id/btnSubtract" style="@style/OperatorButton" android:text="−" />
+
+        <!-- Row 4 -->
+        <Button android:id="@+id/btn1" style="@style/NumberButton" android:text="1" />
+        <Button android:id="@+id/btn2" style="@style/NumberButton" android:text="2" />
+        <Button android:id="@+id/btn3" style="@style/NumberButton" android:text="3" />
+        <Button android:id="@+id/btnAdd" style="@style/OperatorButton" android:text="+" />
+
+        <!-- Row 5 -->
+        <Button android:id="@+id/btnPlusMinus" style="@style/FunctionButton" android:text="+/-" />
+        <Button android:id="@+id/btn0" style="@style/NumberButton" android:text="0" />
+        <Button android:id="@+id/btnDot" style="@style/NumberButton" android:text="." />
+        <Button android:id="@+id/btnEquals" style="@style/EqualsButton" android:text="=" />
+
+    </GridLayout>
+
+    <!-- 批量求和计算入口 -->
+    <Button
+        android:id="@+id/btnOpenBatch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/btn_open_batch"
+        android:textColor="@color/text_primary"
+        android:backgroundTint="@color/operator_color" />
+
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">计算器</string>
+
+    <!-- 批量求和计算界面 -->
+    <string name="batch_title">批量求和计算</string>
+    <string name="label_unit_price">单价</string>
+    <string name="hint_unit_price">请输入单价</string>
+    <string name="hint_enter_number">输入一个数字后点击添加</string>
+    <string name="btn_add_number">添加</string>
+    <string name="empty_list_hint">已添加的数字（点击计算查看结果）：\n暂无数据</string>
+    <string name="btn_calculate">计算</string>
+    <string name="btn_clear_all">清空</string>
+    <string name="btn_back_calc">返回普通计算器</string>
+    <string name="btn_open_batch">批量求和计算（多数字+单价）</string>
+
+    <string name="result_sum">加法总和：%1$s</string>
+    <string name="result_sum_times_price">总和 × 单价 = %1$s</string>
+    <string name="result_average">总和平均值（总和 ÷ 个数）= %1$s</string>
+    <string name="result_average_times_price">平均值 × 单价 = %1$s</string>
+
+    <string name="error_empty_numbers">请先添加至少一个数字</string>
+    <string name="error_empty_price">请输入单价</string>
+    <string name="list_header">已添加的数字（%1$d 个）：\n</string>
+</resources>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/bg_color"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/batch_title"
+        android:textSize="20sp"
+        android:textColor="@color/text_primary"
+        android:layout_marginTop="16dp"
+        android:gravity="center" />
+
+    <!-- 单价输入 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_unit_price"
+            android:textSize="16sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginEnd="12dp" />
+
+        <EditText
+            android:id="@+id/unitPriceInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="numberDecimal"
+            android:hint="@string/hint_unit_price"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary"
+            android:backgroundTint="@color/operator_color" />
+    </LinearLayout>
+
+    <!-- 数字输入 + 添加按钮 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/numberInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="numberDecimal"
+            android:hint="@string/hint_enter_number"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary"
+            android:backgroundTint="@color/operator_color" />
+
+        <Button
+            android:id="@+id/btnAddNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/btn_add_number"
+            android:textColor="@color/text_primary"
+            android:backgroundTint="@color/operator_color" />
+    </LinearLayout>
+
+    <!-- 已添加的数字列表 -->
+    <TextView
+        android:id="@+id/numbersListText"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="12dp"
+        android:background="@color/display_bg"
+        android:padding="12dp"
+        android:textColor="@color/text_primary"
+        android:textSize="14sp"
+        android:text="@string/empty_list_hint" />
+
+    <!-- 操作按钮 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp">
+
+        <Button
+            android:id="@+id/btnCalculate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/btn_calculate"
+            android:textColor="@color/text_primary"
+            android:backgroundTint="@color/operator_color" />
+
+        <Button
+            android:id="@+id/btnClearAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="@string/btn_clear_all"
+            android:textColor="@color/text_primary"
+            android:backgroundTint="@color/function_bg" />
+    </LinearLayout>
+
+    <!-- 结果显示 -->
+    <LinearLayout
+        android:id="@+id/resultBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp"
+        android:background="@color/display_bg"
+        android:padding="16dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/resSum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/resSumTimesPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/resAverage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/resAverageTimesPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/highlight_color"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+    <!-- 返回计算器 -->
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/btn_back_calc"
+        android:textColor="@color/text_primary"
+        android:backgroundTint="@color/function_bg" />
+
+</LinearLayout>
