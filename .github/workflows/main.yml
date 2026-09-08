@@ -12,8 +12,11 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-    - name: Set up Gradle
-      uses: gradle/actions/setup-gradle@v4
+    - name: Setup Gradle 8.5
+      run: |
+        wget -q https://services.gradle.org/distributions/gradle-8.5-bin.zip
+        unzip -q gradle-8.5-bin.zip
+        echo "PATH=$PWD/gradle-8.5/bin:$PATH" >> $GITHUB_ENV
     - name: Build Debug APK
       run: gradle assembleDebug
       working-directory: app
